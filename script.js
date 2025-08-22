@@ -20,6 +20,8 @@ btn.addEventListener("click", () => {
   }
 });
 
+
+
 function createGrid(size) {
   container.innerHTML = "";
 
@@ -34,6 +36,10 @@ function createGrid(size) {
     grid.style.boxSizing = "border-box";
 
     container.appendChild(grid);
+
+    grid.addEventListener("mouseover", () => {
+      grid.style.backgroundColor = "black";
+    });
   }
 }
 
