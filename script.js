@@ -20,7 +20,17 @@ btn.addEventListener("click", () => {
   }
 });
 
+function randomColor() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
 
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+// function addOpacity() {
+//
+// }
 
 function createGrid(size) {
   container.innerHTML = "";
@@ -38,7 +48,7 @@ function createGrid(size) {
     container.appendChild(grid);
 
     grid.addEventListener("mouseover", () => {
-      grid.style.backgroundColor = "black";
+      grid.style.backgroundColor = randomColor();
     });
   }
 }
